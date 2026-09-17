@@ -213,6 +213,26 @@
     ]
   },
   {
+    "id": "1306900",
+    "title": "Experiencing first-hand a spicy incident",
+    "description": "Learn first-hand what it's like to be involved in a critical incident using a group tabletop exercise. Experience it now using an ultra-realistic simulation - or wait until you can experience it for real at your company at 5am.",
+    "format": "Workshop",
+    "minutes": 60,
+    "level": "Introductory",
+    "topics": [
+      "Incident Response"
+    ],
+    "chip": "Security",
+    "speakers": [
+      {
+        "name": "Joe McKevitt",
+        "tagline": "CTO of Uptime Labs",
+        "bio": "Its always been about the tech, people and process for me, I love all 3!\n\nI am very passionate about topics that help craft great software products, such as Continuous Delivery, DevOps, Test Automation and Architecture/Coding best practices, along with modern leadership and management practices that help grow, nurture, and motivate teams.\n\nOver the years, my experience has led me to work within Financial Services, and that experience brought me to cofound Uptime Labs. Our mission is to grow incident response mastery in every company.\n\nAs a co-founder, we have an opportunity to create a company culture that they always wanted to work for that's passionate about its mission, its customers and the craft of building great reliable products.",
+        "photo": "joe-mckevitt-uptime.jpeg"
+      }
+    ]
+  },
+  {
     "id": "1309913",
     "title": "Follow the Twenty Quid: The AI Bill That Doesn't Add Up",
     "description": "No prompts, no agent architecture, no tooling demo. This is a talk about money.\n\nTwenty quid a month. That's what an AI subscription costs, near enough, whether it's ChatGPT, Claude or Cursor. Tens of thousands of pounds for a single chip. Warehouses of them, drawing power like a small city. Somebody is covering the difference, and it isn't me.\n\nI went looking for who, and got it wrong twice.\n\nMaybe nobody's covering anything, and this simply isn't expensive to run. Except power is only about 1% of what an hour of GPU time costs. The money goes on the chip itself. So the gap is real. Then maybe they're taking the loss on me. Except OpenAI's leaked, FT-verified accounts show serving turns a profit, and the twenty-billion-dollar hole is research.\n\nThe answer is other users. The 95% who pay nothing, and more surprisingly the quiet payers who barely touch it. The expensive ones are the people in this room running coding agents overnight, and three companies have now said so publicly.\n\nThat should have been the end of it. Except the labs spent twenty billion a year themselves, so somebody funds them too. Keep pulling and it stops being about software: thirty-eight billion dollars per gigawatt of datacentre, companies buying repurposed jet engines because grid connections take years, and SoftBank selling its entire Nvidia stake to fund a company that hands the money straight back to Nvidia.\n\nWe have seen most of this film. Netflix burned cash for a decade at £5.99, turned profitable, and only then brought in ads, a password crackdown, and a £12.99 price tag. All three have now appeared in AI, the last of them in April.\n\nYou'll leave knowing which of the five very different layers of this industry actually makes money, whether you personally are one of the expensive users, and one question worth asking about whatever you're building: what happen if the price of a token doubled tomorrow?\n\nNothing to sell here. Every figure is sourced.",
@@ -507,7 +527,7 @@
   {
     "id": "1306805",
     "title": "Ranking Every Trainer in Pokemon Red",
-    "description": "Title could maybe be better. At the start of this year I was working on a small project to rank every trainer in Pokémon Red. There’s a mix of how the GameBoy system works, how Pokemon Red works, how you can use emulation and Python to automate the game and build a fun set of statistics. The output of the project was 1400 hours of video from around 1.6 million battles run in the cloud, and there’ll be a YouTube video about it sometime in the coming months if I get around to finishing my write up\n\nTopics involved:\n* The Game Boy system\n* Console emulation\n* Pokemon Red\n* Assembly\n* Python\n* The Cloud (minor)",
+    "description": "Which Pokémon trainer is the very best in Pokémon Red? The answer may surprise you!\n\nPokémon Red is one of my favorite games. I probably went through hundreds of AA batteries playing it. At the start of this year I put together a small project to rank every single trainer by making them all fight each other over, and over, and over until I found out who was the best.\n\nIn this talk I'm going to talk about how the Game Boy system works, how I made every trainer battle each other, how I ranked the results (ignoring good scientific practices), and how I saved my CPU from melting itself.\n\nTopics involved:\n* The Game Boy system\n* Console emulation\n* Pokemon Red\n* Assembly\n* Python\n* The Cloud (minor)",
     "format": "Talk",
     "minutes": 30,
     "level": "Intermediate",
