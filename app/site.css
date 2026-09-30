@@ -928,10 +928,21 @@ footer.site{padding:var(--s6) 0 var(--s5);background:var(--bg-2);}
 /* the head sits on the axis; the eyebrow stays left as the way back. Direct children
    only, so "Read next" and "Pass it on" at the end do not follow. */
 .post > .page-wrap > .sec-title{text-align:center;}
-/* a role opens the same way: title, facts and lead on the axis, the eyebrow left as the way back */
-.role > .page-wrap > .sec-title,.role > .page-wrap > .sec-lead{text-align:center;}
-.role > .page-wrap > .sec-lead{margin-inline:auto;}
+/* a role, or a call (volunteers), opens the same way: title, facts, lead and CTA on the
+   axis, the eyebrow left as the way back */
+.role > .page-wrap > .sec-title,.role > .page-wrap > .sec-lead,
+.call > .page-wrap > .sec-title,.call > .page-wrap > .sec-lead{text-align:center;}
+.role > .page-wrap > .sec-lead,.call > .page-wrap > .sec-lead{margin-inline:auto;}
 .role > .page-wrap > .facts{justify-content:center;}
+.call > .page-wrap > .btn-row{justify-content:center;}
+/* the call: the statement band's photo under the head, then the reading column */
+.call .statement-photo + .prose{margin-top:var(--s6);}
+/* a Google Form in the reading column: full width, the site's corner. Its own
+   canvas stays white in the dark theme: the form is theirs, not ours. */
+.prose > .form-embed{margin-top:var(--s4);}
+.form-embed iframe{display:block;width:100%;border:0;border-radius:var(--r);background:#fff;}
+/* a heading jumped to from the CTA has to clear the sticky header too */
+.prose > [id]{scroll-margin-top:calc(var(--header-h) + 12px);}
 /* the byline is the agenda session card's shape: the face at the left, who beside it,
    the when line in mono underneath; here the face spans both rows because there is no
    title row between them. Canvas fill with the chips' solid hairline. fit-content +

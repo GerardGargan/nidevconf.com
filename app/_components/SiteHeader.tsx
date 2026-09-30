@@ -19,6 +19,7 @@ export default function SiteHeader() {
         <nav className="nav-links" aria-label="Primary">
           <Link href="/#agenda">Agenda</Link>
           <Link href="/#village">Villages</Link>
+          <Link href="/volunteers">Volunteer</Link>
           <Link href="/#sponsor">Sponsor</Link>
           <Link className="btn btn-primary" href="/#tickets">
             Get tickets

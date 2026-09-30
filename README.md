@@ -37,6 +37,8 @@ app/
                         # (/articles/<slug>). Each article is a file in
                         # articles/posts/, listed in articles.tsx. Slugs are
                         # URLs: never change one once published.
+  volunteers/           # Call for volunteers (/volunteers): the sign-up form,
+                        # and photos of the crew at work
   opportunities/        # Volunteer roles board (/opportunities) and one page
                         # per role (/opportunities/<slug>); roles.tsx is the
                         # data. Unlisted: noindex, not linked from anywhere.
