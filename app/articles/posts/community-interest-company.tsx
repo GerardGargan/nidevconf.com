@@ -7,7 +7,6 @@ import SponsorTiers from "../../_components/SponsorTiers";
 import RoleCard from "../../opportunities/RoleCard";
 import { roles } from "../../opportunities/roles";
 
-const VOLUNTEER_FORM = "https://forms.gle/egaE5KJNsnHv6Asg9";
 const CIC_GUIDANCE =
   "https://www.gov.uk/government/publications/community-interest-companies-how-to-form-a-cic/community-interest-companies-guidance-chapters";
 
@@ -588,7 +587,7 @@ const article: Article = {
         ))}
       </ul>
       <p className="also">
-        Or, come along as a <a href={VOLUNTEER_FORM}>volunteer</a>.
+        Or, come along as a <Link href="/volunteers">volunteer</Link>.
       </p>
 
       <h2>Come to the conference</h2>
