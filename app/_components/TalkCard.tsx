@@ -2,21 +2,24 @@
 
 /* eslint-disable @next/next/no-img-element */
 import { useRef, type CSSProperties } from "react";
-import type sessions from "../_data/sessions.json";
+import SessionBody, { type Session } from "../sessions/SessionBody";
 
-export type Session = (typeof sessions)[number];
+export type { Session };
 
 /* A session in its timetable slot. The card is a button sized by the grid, so it
    only previews — faces, title, who — and the abstract and bios open in a
    <dialog>, which brings its own focus trap, Escape and backdrop. */
 export default function TalkCard({
   session: s,
+  faces,
   when,
   track,
   flash,
   style,
 }: {
   session: Session;
+  /** one photo file per speaker for the modal, the large crop where there is one */
+  faces: string[];
   when: string;
   track: string;
   /** a lightning talk: the slot is a third the height, so the card is one row */
@@ -25,10 +28,6 @@ export default function TalkCard({
 }) {
   const dlg = useRef<HTMLDialogElement>(null);
   const who = s.speakers.map((p) => p.name).join(" & ");
-  const faces = (px: number) =>
-    s.speakers.map((p) => (
-      <img key={p.photo} src={`/images/speakers/${p.photo}`} width={px} height={px} alt="" />
-    ));
 
   return (
     <>
@@ -40,7 +39,11 @@ export default function TalkCard({
         style={style}
         onClick={() => dlg.current?.showModal()}
       >
-        <span className="ag-face">{faces(28)}</span>
+        <span className="ag-face">
+          {s.speakers.map((p) => (
+            <img key={p.photo} src={`/images/speakers/${p.photo}`} width={28} height={28} alt="" />
+          ))}
+        </span>
         <span className="ag-who">{who}</span>
         <span className="ag-title">{s.title}</span>
         <span className="ag-when">{when}</span>
@@ -60,24 +63,7 @@ export default function TalkCard({
               ×
             </button>
           </form>
-          <div className="td-head">
-            <span className="td-face">{faces(64)}</span>
-            <div>
-              <h3 className="td-title">{s.title}</h3>
-              <p className="td-who">{who}</p>
-              <p className="td-meta">
-                {when} · {track} · {s.format} · {s.level} · {s.chip}
-              </p>
-            </div>
-          </div>
-          <p className="td-desc">{s.description}</p>
-          {s.speakers.map((p) => (
-            <div key={p.photo} className="td-speaker">
-              <p className="td-name">{p.name}</p>
-              <p className="td-tag">{p.tagline}</p>
-              <p className="td-bio">{p.bio}</p>
-            </div>
-          ))}
+          <SessionBody session={s} faces={faces} when={when} track={track} />
         </div>
       </dialog>
     </>

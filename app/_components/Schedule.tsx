@@ -1,5 +1,6 @@
 import type { CSSProperties } from "react";
 import sessions from "../_data/sessions.json";
+import { large } from "../sessions/photos";
 import TalkCard, { type Session } from "./TalkCard";
 
 const TRACKS = ["Hall 1A", "Hall 1B", "Room 1A", "Room 1B", "Workshops"];
@@ -156,6 +157,13 @@ const FACE_OF = new Map(
 );
 
 const span = (i: Item) => i.layout ?? [i.start, i.end];
+const whenOf = (i: Item) => `${clock(i.start)} (${length(i.end - i.start)})`;
+
+/* where a session sits in the day, for its own page */
+export function placement(id: string) {
+  const i = ITEMS.find((x) => x.session?.id === id);
+  return i && { when: whenOf(i), track: TRACKS[i.track!] };
+}
 
 const clock = (m: number) =>
   `${String(Math.floor(m / 60)).padStart(2, "0")}:${String(m % 60).padStart(2, "0")}`;
@@ -220,12 +228,13 @@ function Grid({ items }: { items: Item[] }) {
           "--r1": row(from),
           "--r2": row(to),
         } as CSSProperties;
-        const when = `${clock(item.start)} (${length(item.end - item.start)})`;
+        const when = whenOf(item);
         if (item.session) {
           return (
             <TalkCard
               key={key}
               session={item.session}
+              faces={item.session.speakers.map((p) => large(p.photo))}
               when={when}
               track={TRACKS[item.track!]}
               flash={item.end - item.start < 30}

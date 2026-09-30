@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { articles } from "./articles/articles";
+import sessions from "./_data/sessions.json";
 
 export const dynamic = "force-static";
 
@@ -24,6 +25,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(a.date),
       changeFrequency: "yearly" as const,
       priority: 0.7,
+    })),
+    ...sessions.map((s) => ({
+      url: `${baseUrl}/sessions/${s.slug}`,
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
     })),
   ];
 }
