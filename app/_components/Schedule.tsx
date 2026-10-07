@@ -3,7 +3,7 @@ import sessions from "../_data/sessions.json";
 import { large } from "../sessions/photos";
 import TalkCard, { type Session } from "./TalkCard";
 
-const TRACKS = ["Hall 1A", "Hall 1B", "Room 1A", "Room 1B", "Workshops"];
+const TRACKS = ["Hall 1A", "Hall 1B", "Room 1A", "Room 1B", "Room 2A"];
 
 const at = (h: number, m = 0) => h * 60 + m;
 
