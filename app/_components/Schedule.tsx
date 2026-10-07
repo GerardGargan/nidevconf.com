@@ -83,6 +83,7 @@ const PINNED: Record<string, [start: number, track: number]> = {
   "1311260": [at(13, 45), 0], // Terminal Panic
   "1310638": [at(14, 30), 0], // Making the Smart Dumb Thing Smart
   "1331334": [at(11, 30), 0], // Shipping Quick, Failing Fast
+  "tony-mcbride-cv": [at(15, 30), 4], // Building a Tech CV — the last workshop
 };
 const pinned = (start: number, track: number) =>
   sessions.find((s) => PINNED[s.id]?.[0] === start && PINNED[s.id]?.[1] === track);

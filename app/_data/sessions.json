@@ -45,6 +45,27 @@
     ]
   },
   {
+    "id": "tony-mcbride-cv",
+    "slug": "building-a-tech-cv",
+    "title": "Building a Tech CV",
+    "description": "The job market is changing rapidly, and with an average of 242 applications for corporate vacancies, small details in your application matter more than ever.\n\nThis workshop, led by Tony McBride, will show you how to write and tailor your CV in a way that gets you short-listed for interviews and in prime position for a job offer. If you are thinking of applying, or facing more rejections than you'd like, this workshop is just for you.",
+    "format": "Workshop",
+    "minutes": 60,
+    "level": "Introductory",
+    "topics": [
+      "Non-Technical"
+    ],
+    "chip": "Career",
+    "speakers": [
+      {
+        "name": "Tony McBride",
+        "tagline": "Career Transition Coach",
+        "bio": "Tony McBride is a Career Transition Coach that helps tech professionals secure new roles through CV, Interview and Career Coaching.\n\nPrior to starting his freelance work, he spent 8 years at PwC in their Tech Managed Services business as their resourcing lead, which has given him a deep understanding of the specialised approach needed to place Developers into new roles in this job market. Follow him on LinkedIn to learn more.\n\nhttps://www.linkedin.com/in/tonymcbride-careercoach/",
+        "photo": "tony-mcbride.jpg"
+      }
+    ]
+  },
+  {
     "id": "1274424",
     "slug": "chaining-the-unchainable-finding-and-exploiting-logic-flaws-in-modern-web-architectures",
     "title": "Chaining the Unchainable: Finding and Exploiting Logic Flaws in Modern Web Architectures",
